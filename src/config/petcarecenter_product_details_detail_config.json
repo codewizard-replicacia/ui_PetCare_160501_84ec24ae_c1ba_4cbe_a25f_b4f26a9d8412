@@ -1,0 +1,118 @@
+{
+
+"petcarecenter": [
+    {
+        "key": "PcId",
+        "type": "keyid"
+    }
+            ,{
+            "key": "PetCareCenterServices",
+            "uicomponent": "petserviceservices",
+            "nocreate": true
+        }
+
+    ,{
+        "key": "Address",
+        "label": "Address",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Name",
+        "label": "Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BranchName",
+        "label": "BranchName",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Pincode",
+        "label": "Pincode",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isNumber"
+, "isPositive"
+        ]
+                            }
+    ,{
+        "key": "IsOperational",
+        "label": "IsOperational",
+        "type": "check",
+        "editable": true,
+        "validators": [
+             "isTruthy"
+        ]
+                            }
+]
+
+,"petserviceservices": [
+    {
+        "key": "ServiceId",
+        "type": "keyid"
+    }
+
+    ,{
+        "key": "ServiceType",
+        "label": "ServiceType",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "PetServiceType",
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "Price",
+        "label": "Price",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "$field.getType()",
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "DogSize",
+        "label": "DogSize",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "ServiceAt",
+        "label": "ServiceAt",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "DurationInDays",
+        "label": "DurationInDays",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isNumber"
+, "isPositive"
+        ]
+                            }
+]
+}
